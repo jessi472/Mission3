@@ -1,0 +1,33 @@
+﻿<!--Jessica Kinghorn Mission 3 Shared Layout-->
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <!--dynamic title-->
+    <title>@ViewData["Title"]</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+</head>
+<body>
+    <!--stylesheets-->
+    <link href="~/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/StyleSheet.css" rel="stylesheet" />
+
+    <!--navigation to both index and grade calculation page-->
+    <nav>
+        <a asp-controller="Blah" asp-action="Index">About Me</a>
+        <a asp-controller="Blah" asp-action="GradeCalculator">Grade Calculator</a>
+    </nav>
+    <div>
+        <!--js/css files used in every page-->
+        <script src="~/bootstrap/js/bootstrap.min.js"></script>
+        <script src="~/lib/jquery-3.6.0.min.js"></script>
+
+        <!--Dynamic pages-->
+        @RenderBody()
+
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+﻿<!--Jessica Kinghorn Mission 3 Grade Calculator cshtml form-->
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"]= "Grade Calculator";
+}
+@model GradeCalculatorModel;
+
+<!--Grade Calculator inputs are used to calculate final percentage and letter grade in GradeCalculator.js-->
+<h5>Grade Calculator: (enter a number between 0 and 100)</h5>
+<form method="post">
+    <p>
+        <label>Assignments:</label>
+        <input id="assignments" asp-for="Assignments"/> %
+        <br />
+    </p>
+
+    <p>
+        <label>Group Project:</label>
+        <input id="group_project" asp-for="GroupProjects"/> %
+        <br />
+    <p>
+        <label>Quizzes:</label>
+        <input id="quizzes" asp-for="Quizzes"/> %
+        <br />
+    <p>
+        <label>Exams:</label>
+        <input id="exams" asp-for="Exams"/> %
+        <br />
+    </p>
+
+    <p>
+        <label>INTEX:</label>
+        <input id="intex" asp-for="Intex"/> %
+    </p>
+    <br />
+    <input type="submit" id="btnSend" value="Submit Percentages" />
+    <br />
+    <div asp-validation-summary="All"></div>
+    <br />
+
+
+
+</form>
+
+
+<script src="~/js/GradeCalculator.js"></script>
